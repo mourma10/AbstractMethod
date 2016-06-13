@@ -10,7 +10,8 @@ public abstract class Pizza {
     protected Pate patePizza;
     protected Sauce saucePizza;
 
-    protected Pizza() {
+    protected Pizza(FabriqueIngredient fabriqueIngredient) {
+        this.fabriqueIngredient = fabriqueIngredient;
         System.out.print("\nConstructeur de : ");
     }
 
