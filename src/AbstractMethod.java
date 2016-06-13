@@ -35,5 +35,6 @@ class AbstractMethod {
                     break;
             }
         } while (choix != 0);
+        System.out.print("Test");
     }
 }
