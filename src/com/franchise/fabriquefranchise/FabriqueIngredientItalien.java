@@ -15,7 +15,7 @@ import com.pizzeria.Sauce;
 
 public class FabriqueIngredientItalien implements FabriqueIngredient {
     public Pate creerPate(String type) {
-        Pate pate = null;
+        Pate pate;
         switch (type) {
             case "Fromage":
                 pate = new PateTresFine();
@@ -23,12 +23,14 @@ public class FabriqueIngredientItalien implements FabriqueIngredient {
             case "Poivron":
                 pate = new PateSouffleeFine();
                 break;
+            default:
+                throw new RuntimeException("Pate non disponible");
         }
         return pate;
     }
 
     public Sauce creerSauce(String type) {
-        Sauce sauce = null;
+        Sauce sauce;
         switch (type) {
             case "Fromage":
                 sauce = new SauceTomate();
@@ -36,6 +38,8 @@ public class FabriqueIngredientItalien implements FabriqueIngredient {
             case "Poivron":
                 sauce = new SauceTomateCerise();
                 break;
+            default:
+                throw new RuntimeException("Pate non disponible");
         }
         return sauce;
     }

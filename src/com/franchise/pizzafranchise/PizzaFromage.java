@@ -11,8 +11,7 @@ import com.pizzeria.Pizza;
 
 public class PizzaFromage extends Pizza {
     public PizzaFromage(FabriqueIngredient f) {
-        super();
-        fabriqueIngredient = f;
+        super(f);
         if (fabriqueIngredient instanceof FabriqueIngredientAmericain)
             System.out.println("Pizza Fromage Americain\n");
         else if (fabriqueIngredient instanceof FabriqueIngredientItalien)
